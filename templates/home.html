@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The_trial
-    </title>
+    <title>The_trial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <style>
+      #banner{
+
+        height: 360px;
+        width:100%;
+      }
+    </style>
 
     
   </head>
   <body>
-    <div id="container">
+    <div class="container">
     
-    <style>
-      h1{
-        font-size: 40 px;
-        font-family: Roboto;
-        font-weight:normal;
-        color:rgb(50,50,50)
-        text-align: center;
-        
-      }
-
-      #banner{
-        width:100%;
-        height:360px;
-        object-fit: cover;
-      }
-      h2{
-        font: family Roboto;
-        font: size 32px;
-        color: rgb(100, 100, 100);
-        text-align:center;
-        font-weight:normal
-      }
-      .body_text{font-family: Roboto;
-        color:rgb(80,80,80);
-       }
-
-      #container{
-        max: width: 720px;
-        margin:0,auto,0,auto;
-      }
-    </style>
-      <h1>Trial_1</h1>
-      <img id="banner" src="https://7fc71af5-e452-4ce5-98d8-0e62b17d1383-00-by3eieu0yz9k.sisko.repl.co/static/banner.jpeg">
-    <h2>About the trial</h2>
-    <p class="body_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-    <h3>Why i made the trial
+    
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Jobs</h1>
+      <img class="img-fluid" id="banner" src="https://7fc71af5-e452-4ce5-98d8-0e62b17d1383-00-by3eieu0yz9k.sisko.repl.co/static/banner.jpeg">
+    <h2 class="text-center mt-2 mb-4">About the trial</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3 class="text-center mt-2 mb-4">The jobs availabale
     </h3>
-    <p class="body_text">TODO-content about the maker of the trial</p>
-      <div style="text-align:center;">
-    <button>just press it </button>
-        <p>Copywright 2024</p>
+      
+      <div>
+          {% for job in jobs %}
+            {% include 'jobitem.html' %}
+        
+          {% endfor %}
+      </div>
+
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">CONTACT US </button>
+        <p class="mt4">Copywright 2024</p>
       </div> 
     </div>
   </body>
